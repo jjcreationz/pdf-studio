@@ -31,6 +31,13 @@ export default function App() {
   const [busy, setBusy] = useState(false)
 
   useEffect(() => {
+    // Remove tracking query strings and fragments from the visible URL.
+    if (window.location.search || window.location.hash) {
+      window.history.replaceState({}, document.title, window.location.pathname)
+    }
+  }, [])
+
+  useEffect(() => {
     let cancelled = false
     async function renderPage() {
       if (!pdf || !canvasRef.current) return
@@ -145,11 +152,10 @@ export default function App() {
   return (
     <div className="app-shell">
       <header className="topbar">
-        <a className="brand" href="#" aria-label="JJ Creationz home">
+        <a className="brand" href="./" aria-label="JJ Creationz home">
           <img src={`${import.meta.env.BASE_URL}logo.png`} alt="JJ Creationz logo" className="brand-logo" />
           <span className="brand-copy"><strong>JJ <em>CREATIONZ</em></strong><small>PDF STUDIO</small></span>
         </a>
-        <div className="topbar-right"><span className="privacy"><ShieldCheck size={15} /> Files stay on your device</span><a className="github-link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a></div>
       </header>
 
       <main>
