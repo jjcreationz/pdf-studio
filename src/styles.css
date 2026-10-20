@@ -64,3 +64,208 @@ footer p{font-size:11px;margin:7px 0 13px}footer small{font-size:10px;color:#596
 .spin{animation:spin 1s linear infinite;color:#63c8ff;margin-top:40px}@keyframes spin{to{transform:rotate(360deg)}}
 @media(max-width:760px){.topbar{padding:0 16px;height:67px}.privacy{display:none}.topbar-right{gap:10px}main{padding:0 14px}.hero{padding:48px 0 28px}.hero-meta{flex-wrap:wrap}.feature-row{grid-template-columns:1fr;gap:10px;margin-bottom:42px}.feature-row article{display:grid;grid-template-columns:38px 1fr;column-gap:10px;align-items:center}.feature-icon{grid-row:span 2;margin:0}.feature-row p{margin-top:4px}.editor-grid{grid-template-columns:1fr}.preview-panel{border-right:0;border-bottom:1px solid #263246}.tools-panel{padding:16px}.workspace-head{padding:12px}.canvas-wrap{min-height:250px}.brand-copy strong{font-size:12px}.brand-logo{width:37px;height:37px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+
+/* About page */
+.about-page {
+  padding-bottom: 50px;
+}
+
+.about-hero {
+  max-width: 850px;
+  margin: auto;
+  padding: 76px 0 65px;
+  text-align: center;
+}
+
+.about-hero > p,
+.about-copy p,
+.about-mission > p,
+.about-next > p {
+  color: #9ca9bd;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.about-hero > p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.about-hero .primary-btn {
+  margin-top: 8px;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto 65px;
+}
+
+.about-kicker {
+  color: #48c5ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.about-copy h2,
+.about-mission h2,
+.about-next h2 {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(25px, 3.5vw, 36px);
+  line-height: 1.25;
+  letter-spacing: -1px;
+  margin: 14px 0;
+}
+
+.about-copy p {
+  font-size: 13px;
+}
+
+.about-visual {
+  min-height: 255px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #263b54;
+  border-radius: 20px;
+  background:
+    radial-gradient(ellipse at center, #123858 0%, #101a29 48%, #0c111a 100%);
+}
+
+.about-logo-mark {
+  font-family: Manrope, sans-serif;
+  font-size: 76px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -6px;
+  color: #eaf6ff;
+}
+
+.about-logo-mark span {
+  color: #08d6e8;
+}
+
+.about-visual-line {
+  width: 65px;
+  height: 3px;
+  margin: 20px 0 12px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #168bff, #08d6e8);
+}
+
+.about-visual > p {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #94a9c2;
+}
+
+.about-mission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 38px 30px;
+  border: 1px solid #263246;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #101a29, #0c111a);
+}
+
+.about-card-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+  border: 1px solid #244864;
+  border-radius: 14px;
+  background: #10263e;
+  color: #58c6ff;
+}
+
+.about-mission h2 {
+  max-width: 650px;
+}
+
+.about-mission > p {
+  max-width: 690px;
+  margin: 0;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  max-width: 960px;
+  margin: 0 auto 65px;
+}
+
+.about-value-card {
+  padding: 22px;
+  border: 1px solid #202a39;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #101722, #0c111a);
+}
+
+.about-value-card h3 {
+  margin: 0 0 9px;
+  font-family: Manrope, sans-serif;
+  font-size: 15px;
+}
+
+.about-value-card p {
+  margin: 0;
+  color: #8997aa;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.about-next {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 38px 24px;
+  text-align: center;
+  border: 1px solid #263246;
+  border-radius: 18px;
+  background: radial-gradient(ellipse at top, #122b43, #0c111a 75%);
+}
+
+.about-next > p {
+  max-width: 620px;
+  margin: 0 auto 22px;
+}
+
+.about-next .primary-btn svg {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 760px) {
+  .about-hero {
+    padding: 52px 0 42px;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-bottom: 42px;
+  }
+
+  .about-visual {
+    min-height: 200px;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+    margin-bottom: 42px;
+  }
+
+  .about-mission {
+    padding: 28px 18px;
+  }
+}
